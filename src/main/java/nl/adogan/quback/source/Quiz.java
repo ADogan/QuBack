@@ -12,6 +12,10 @@ public class Quiz {
 		questions = new ArrayList<Question>();
 	}
 	
+	public Quiz(String quizname) {
+		this.setQuizName(quizname);
+	}
+	
 	public String getQuizName() {
 		return quizName;
 	}
@@ -24,6 +28,9 @@ public class Quiz {
 	}
 	public void setQuestions(List<Question> questions) {
 		this.questions = questions;
+	}
+	public void addQuestion(Question newQuestion) {
+		this.questions.add(newQuestion);
 	}
 
 	public String toString() {
