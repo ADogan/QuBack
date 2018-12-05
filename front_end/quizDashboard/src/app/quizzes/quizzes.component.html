@@ -1,0 +1,10 @@
+<h2>Quizzes</h2>
+<ul class="quizzes">
+  <li *ngFor="let quiz of quizzes" 
+  [class.selected]="quiz === selectedQuiz"
+  (click)="onSelect(quiz)">
+    <span class="badge">{{quiz.id}}</span> {{quiz.name}}
+  </li>
+</ul>
+
+<app-quiz [quiz]="selectedQuiz"></app-quiz>
